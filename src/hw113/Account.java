@@ -1,7 +1,8 @@
+package hw113;
+
 import java.util.Date;
 
-
-public class Account {
+class Account {
 	private int id = 0;
 	private double balance = 0;
 	private double annualInterestRate = 0;
@@ -64,4 +65,9 @@ public class Account {
 	public void deposit(double money){
 		balance += money;
 	} //save money in
+	
+	@Override
+	public String toString(){
+		return ("The Account id is "+id+"\nThe balance is "+balance+"\nThe annual interest rate is "+annualInterestRate+"%\nIt created at "+dateCreated);
+	}
 }
